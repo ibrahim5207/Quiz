@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Quiz Chatbot</h1>
+            <p>Test your knowledge with AI!</p>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        👋 Hello! I'm your Quiz Assistant. Ready to test your knowledge?
+                    </div>
+                    <div class="message bot-message">
+                        Type 'start' to begin the quiz, or ask me about:
+                        <br>• Categories
+                        <br>• Rules
+                        <br>• Leaderboard
+                    </div>
+                </div>
+
+                <div class="quiz-area" id="quizArea" style="display: none;">
+                    <div class="question-card">
+                        <h3 id="questionText">Loading...</h3>
+                        <div class="category-badge" id="category">General</div>
+                        <div class="options" id="optionsContainer"></div>
+                        <div class="progress">
+                            Question <span id="currentQuestion">1</span> of <span id="totalQuestions">5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
+                    <button id="sendButton">Send</button>
+                </div>
+            </div>
+
+            <div class="leaderboard" id="leaderboard">
+                <h3>🏆 Leaderboard</h3>
+                <div id="leaderboardContent">Loading...</div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
